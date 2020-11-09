@@ -5,7 +5,7 @@
 <ul>
   {{ range .Pages.ByWeight }}
     {{ $title := .Title }}
-    {{ $url := .URL }}
+    {{ $url := .RelPermalink }}
     {{ range .GetTerms "tags" }}
       {{ if eq "win10" .Title }}
   <li><a href="{{ $url }}"><strong>{{ $title }}</strong></a></li>
@@ -18,7 +18,7 @@
 <ul>
   {{ range .Pages.ByWeight }}
     {{ $title := .Title }}
-    {{ $url := .URL }}
+    {{ $url := .RelPermalink }}
     {{ range .GetTerms "tags" }}
       {{ if eq "macos" .Title }}
   <li><a href="{{ $url }}"><strong>{{ $title }}</strong></a></li>
