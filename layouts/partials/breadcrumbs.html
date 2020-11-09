@@ -1,3 +1,4 @@
+{{ $title := .Title }}
 <nav arialabel="You are here:" role="navigation">
   <ul class="breadcrumbs">
     <li><a href="/">HOME</a></li>
@@ -13,7 +14,7 @@
     {{- range after 1 $entries -}}
       {{/* If last entry */}}
       {{- if eq (delimit (last 1 $entries) "") . -}}
-        <li><span class="show-for-sr">Current: </span> {{ humanize . | upper }}</li>
+        <li><span class="show-for-sr">Current: </span> {{ $title | upper }}</li>
       {{- else -}}
         {{- $path = $path | append . "/" -}}
         <li><a href="{{ delimit $path "" }}">{{ humanize . | upper }}</a></li>
