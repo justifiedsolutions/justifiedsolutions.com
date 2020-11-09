@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
   {{ $css := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.Permalink }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <link rel="icon" type="image/png" href="/images/sfspro-icon-32x32.png" sizes="32x32">
 </head>
 
