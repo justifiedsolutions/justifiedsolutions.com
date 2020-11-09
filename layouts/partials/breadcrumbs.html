@@ -1,0 +1,23 @@
+<nav arialabel="You are here:" role="navigation">
+  <ul class="breadcrumbs">
+    <li><a href="/">HOME</a></li>
+    {{/* Get all non-empty entries */}}
+    {{- $entries := slice "" -}}
+    {{- range (split .RelPermalink "/") -}}
+        {{- if gt (len . ) 0 -}}
+          {{- $entries = $entries | append . -}}
+        {{- end -}}
+    {{- end -}}
+    {{/* Loop over all but first empty entry */}}
+    {{- $path := slice "/" -}}
+    {{- range after 1 $entries -}}
+      {{/* If last entry */}}
+      {{- if eq (delimit (last 1 $entries) "") . -}}
+        <li><span class="show-for-sr">Current: </span> {{ humanize . | upper }}</li>
+      {{- else -}}
+        {{- $path = $path | append . "/" -}}
+        <li><a href="{{ delimit $path "" }}">{{ humanize . | upper }}</a></li>
+      {{ end -}}
+    {{- end }}
+  </ul>
+</nav>

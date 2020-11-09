@@ -1,0 +1,7 @@
+<div>
+  {{ partial "topbar.html" . }}
+  <div class="logo">
+    <img src="{{ .Site.Params.headerImage | relURL }}" alt="Justified Solutions Logo" class="float-center"/>
+  </div>
+  {{ partial "breadcrumbs.html" . }}
+</div>

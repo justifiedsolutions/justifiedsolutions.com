@@ -1,0 +1,38 @@
+<div class="title-bar" data-responsive-toggle="site-top-bar" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="site-top-bar"></button>
+</div>
+<div class="top-bar" id="site-top-bar">
+  <div class="top-bar-left">
+    <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion-menu medium-dropdown">
+      {{ range .Site.Menus.left }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .HasChildren }}
+        <ul class="menu vertical nested">
+          {{ range .Children }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <div class="top-bar-right">
+    <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion-menu medium-dropdown">
+      {{ range .Site.Menus.right }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .HasChildren }}
+        <ul class="menu vertical nested">
+          {{ range .Children }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

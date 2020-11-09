@@ -1,0 +1,51 @@
+// fix deprecation warnings from foundation
+$primary-color: null;
+$secondary-color: null;
+$success-color: null;
+$warning-color: null;
+$alert-color: null;
+$-zf-size: null;
+$-zf-bp-value: null;
+
+@import 'settings';     // *Foundswatch variant
+
+// custom settings
+$mediaobject-image-width-stacked: auto;
+
+//rest of imports
+@import 'foundation';   // Zurb Foundation 6.6.3
+@include foundation-everything;
+@import 'foundswatch';  // *Foundswatch variant
+@import 'owl-carousel';
+@import 'owl-theme';
+
+// custom css
+.logo {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background-color: $primary-color;
+}
+
+.frontpage {
+  background-color: $primary-color;
+  color: white;
+}
+
+.title-bar {
+  background-color: $primary-color;
+}
+
+footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $primary-color;
+  color: white;
+}
+
+.carousel-caption {
+  color: white;
+  background-color: $primary-color;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
