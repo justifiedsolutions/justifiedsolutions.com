@@ -2,13 +2,6 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }}</title>
-  {{ $css := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-  <link rel="icon" type="image/png" href="/images/sfspro-icon-32x32.png" sizes="32x32">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVLKDXFKHT"></script>
   <script>
@@ -18,6 +11,13 @@
 
     gtag('config', 'G-YVLKDXFKHT');
   </script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  {{ $css := resources.Get "sass/main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  <link rel="icon" type="image/png" href="/images/sfspro-icon-32x32.png" sizes="32x32">
 </head>
 
 <body id="top-of-page">
