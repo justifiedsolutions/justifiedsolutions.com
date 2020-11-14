@@ -80,14 +80,6 @@ $global-color-pick-contrast-tolerance: 20;  // !!!
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.2;
-$foundation-palette: (
-	primary: $__bs__blue,
-	secondary: $__bs__gray-600,
-	success: $__bs__green,
-	info: $__bs__cyan,
-	warning: $__bs__yellow,
-	alert: $__bs__red,
-);
 $light-gray: $__bs__gray-200;
 $medium-gray: $__bs__gray-500;
 $dark-gray: $__bs__gray-700;

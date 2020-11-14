@@ -7,6 +7,15 @@ $alert-color: null;
 $-zf-size: null;
 $-zf-bp-value: null;
 
+$foundation-palette: (
+	primary: #002A64,
+	secondary: #95A5A6,
+	success: #18BC9C,
+	info: #3498DB,
+	warning: #F39C12,
+	alert: #E74C3C,
+);
+
 @import 'settings';     // *Foundswatch variant
 
 // custom settings
@@ -23,28 +32,28 @@ $mediaobject-image-width-stacked: auto;
 .logo {
   padding-top: 0px;
   padding-bottom: 10px;
-  background-color: $primary-color;
+  background-color: get-color(primary);
 }
 
 .frontpage {
-  background-color: $primary-color;
+  background-color: get-color(primary);
   color: white;
 }
 
 .title-bar {
-  background-color: $primary-color;
+  background-color: get-color(primary);
 }
 
 footer {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: $primary-color;
+  background-color: get-color(primary);
   color: white;
 }
 
 .carousel-caption {
   color: white;
-  background-color: $primary-color;
+  background-color: get-color(primary);
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
