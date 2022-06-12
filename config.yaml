@@ -1,7 +1,7 @@
 baseURL: https://justifiedsolutions.com/
 languageCode: en-us
 title: Justified Solutions
-copyright: "© 2020 Justified Solutions, LLC"
+copyright: "© 2022 Justified Solutions, LLC"
 
 disableKinds:
   - RSS
