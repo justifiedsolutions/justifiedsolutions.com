@@ -1,5 +1,19 @@
 {{ define "main" }}
 <h2>{{ .Title }}</h2>
+<h3>General</h3>
+
+<ul>
+  {{ range .Pages.ByWeight }}
+    {{ $title := .Title }}
+    {{ $url := .RelPermalink }}
+    {{ range .GetTerms "tags" }}
+      {{ if eq "gen" .Title }}
+  <li><a href="{{ $url }}"><strong>{{ $title }}</strong></a></li>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</ul>
+
 <h3>Windows 10</h3>
 
 <ul>
